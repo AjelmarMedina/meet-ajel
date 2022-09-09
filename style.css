@@ -1,0 +1,94 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,700&display=swap'); */
+
+:root {
+    --Y: #ffe100;
+    --lY: #fff291;
+    --B: #000;
+    --lB: #2f2f2f;
+    --W: #FFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.title-div {
+    background-color: var(--Y);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    animation-name: shrink-title_div;
+    animation-duration: 0.75s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+@keyframes shrink-title_div {
+    from {height: 100vh}
+    to {height: 50vh;}
+}
+
+.title {
+    width: fit-content;
+    height: fit-content;
+}
+
+.main-title {
+    margin-bottom: 1em;
+    font-size: 20vw;
+    font-family: 'Zilla Slab', serif;
+
+    animation-name: shrink-main_title;
+    animation-duration: 0.75s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes shrink-main_title {
+    from {font-size: 20vw;}
+    to {font-size: 10vw;}
+}
+
+.name-title {
+    padding: 10px;
+}
+
+.title-ajelmar {
+    margin-left: 1em;
+    background-color: var(--W);
+    color: var(--B);
+
+    animation-name: ajelmar-slide_in;
+    animation-duration: 0.75s;
+}
+@keyframes ajelmar-slide_in {
+    from {transform: translate(50vw);}
+    to {transform: translate(0vw);}
+}
+
+.title-medina {
+    margin-right: 1em;
+    background-color: var(--B);
+    color: var(--W);
+
+    animation-name: medina-slide_in;
+    animation-duration: 0.75s;
+}
+@keyframes medina-slide_in {
+    from {transform: translate(-50vw);}
+    to {transform: translate(0vw);}
+}
+
+@media only screen and (min-width: 768px) {
+    .main-title {
+        font-size: 10vw;
+    }
+    @keyframes shrink-main_title {
+        from {font-size: 10vw;}
+        to {font-size: 5vw;}
+    }
+}
