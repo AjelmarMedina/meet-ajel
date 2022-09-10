@@ -6,6 +6,8 @@
     --B: #000;
     --lB: #2f2f2f;
     --W: #FFF;
+    --Bl: #000FAF;
+    --lBl: #858CD4;
 }
 
 body {
@@ -36,12 +38,20 @@ body {
 .title {
     width: fit-content;
     height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
 
 .main-title {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     font-size: 20vw;
     font-family: 'Zilla Slab', serif;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     animation-name: shrink-main_title;
     animation-duration: 0.75s;
@@ -83,14 +93,34 @@ body {
     to {transform: translate(0vw);}
 }
 
+.subtitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitle-main {
+  font-size: 7vw;
+  font-family: "Zilla Slab", serif;
+  color: var(--Bl);
+}
+
+.subtitle-stats {
+  font-size: 2.5vw;
+  font-style: italic;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--lBl);
+}
+
 @media only screen and (min-width: 768px) {
     .main-title {
-        font-size: 10vw;
+        font-size: 15vw;
     }
     @keyframes shrink-main_title {
-        from {font-size: 10vw;}
-        to {font-size: 5vw;}
-    }
+        from {font-size: 15vw;}
+        to {font-size: 7vw;}
+    } 
     
     @keyframes shrink-title_div {
     from {height: 100vh}
