@@ -54,7 +54,7 @@ body {
 }
 
 .name-title {
-    padding: 10px;
+    padding: 0.03em 1em;
 }
 
 .title-ajelmar {
@@ -66,7 +66,7 @@ body {
     animation-duration: 0.75s;
 }
 @keyframes ajelmar-slide_in {
-    from {transform: translate(50vw);}
+    from {transform: translate(70vw);}
     to {transform: translate(0vw);}
 }
 
@@ -79,7 +79,7 @@ body {
     animation-duration: 0.75s;
 }
 @keyframes medina-slide_in {
-    from {transform: translate(-50vw);}
+    from {transform: translate(-70vw);}
     to {transform: translate(0vw);}
 }
 
@@ -91,4 +91,9 @@ body {
         from {font-size: 10vw;}
         to {font-size: 5vw;}
     }
+    
+    @keyframes shrink-title_div {
+    from {height: 100vh}
+    to {height: 30vh;}
+  }
 }
