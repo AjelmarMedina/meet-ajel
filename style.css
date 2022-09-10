@@ -27,7 +27,7 @@ body {
 
     animation-name: shrink-title_div;
     animation-duration: 0.75s;
-    animation-delay: 7s;
+    animation-delay: 12s;
     animation-fill-mode: forwards;
 }
 @keyframes shrink-title_div {
@@ -55,7 +55,7 @@ body {
 
     animation-name: shrink-main_title;
     animation-duration: 0.75s;
-    animation-delay: 5s;
+    animation-delay: 10s;
     animation-fill-mode: forwards;
 }
 @keyframes shrink-main_title {
@@ -113,6 +113,20 @@ body {
   color: var(--lBl);
 }
 
+.type-pointer {
+    font-family: "Zilla Slab", serif;
+    color: var(--Bl);
+
+    animation-name: blinking-type_pointer;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes blinking-type_pointer {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 /* Desktop */
 @media only screen and (min-width: 768px) {
     @keyframes shrink-title_div {
@@ -141,7 +155,7 @@ body {
 
         animation-name: shrink-subtitle;
         animation-duration: 0.5s;
-        animation-delay: 5s;
+        animation-delay: 10s;
         animation-fill-mode: forwards;
     }
     @keyframes shrink-subtitle {
