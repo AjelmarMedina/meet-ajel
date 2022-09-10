@@ -8,12 +8,18 @@
     --W: #FFF;
     --Bl: #000FAF;
     --lBl: #858CD4;
+
+    --interests-background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0.9), rgba(255,255,255,0) );
 }
 
-body {
+body, html {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
+
+}
+body {
+    overflow-y: hidden;
 }
 
 .title-div {
@@ -22,17 +28,17 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
 
     animation-name: shrink-title_div;
     animation-duration: 0.75s;
     animation-delay: 12s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 @keyframes shrink-title_div {
     from {height: 100vh}
-    to {height: 40vh;}
+    to {height: 50vh;}
 }
 
 .title {
@@ -128,13 +134,23 @@ body {
 }
 
 .interests-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1.7em;
-  background-color: #343a40;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
-  background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.7em;
+    background-color: #343a40;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+    background-attachment: fixed;
+    box-shadow: inset 0em 3em 3em var(--B);
+
+    animation-name: background-animate;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes background-animate {
+    from {background-position: 0% 0%;}
+    to {background-position: 100% 100%;}
 }
 
 .interests-header {
@@ -145,6 +161,7 @@ body {
   border-radius: 2em;
   margin: 1em;
   font-family: "Zilla Slab", serif;
+  box-shadow: 0.3em 0.4em 0.4em var(--B);
 }
 
 .interests-box {
@@ -157,11 +174,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 1.3em;
-  background-color: var(--W);
+  padding-bottom: 7em;
+  /* background-color: var(--W); */
   color: var(--B);
   margin: 1.5em 0;
-  border: 2px solid var(--lY);
-  border-radius: 3em 
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
+  background-image: var(--interests-background);
 }
 
 .interests p {
@@ -174,9 +193,14 @@ body {
   font-family: monospace;
 }
 
+.interests hr {
+    color: var(--Bl);
+    
+}
+
 
 /* Desktop */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 550px) {
     @keyframes shrink-title_div {
         from {height: 100vh;}
         to {height: 50vh;}
@@ -210,4 +234,23 @@ body {
         from {transform: scale(2);}
         to {transform: scale(1.5);}
     }
+
+    .interests-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+    }
+
+    .interests {
+        margin: 0 1em;
+        transition: ease-in-out 1s;
+    }
+
+    .interests:hover {
+        transform: scale(1.05);
+    }    
+    .interests:hover > h2 {
+        transform: scale(1.5);
+        transform-origin: left;
+    }    
 }

@@ -1,5 +1,10 @@
 window.onload = () => {
+
     setTimeout(typeSubtitleEffect, 2000);
+    setTimeout(() => {
+        document.querySelector("body")
+            .style.overflowY = "scroll"
+    }, 12000)
 }
 
 async function typeSubtitleEffect() {
@@ -30,3 +35,7 @@ async function typeSubtitle(text, textSpan) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
