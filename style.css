@@ -32,7 +32,7 @@ body {
 }
 @keyframes shrink-title_div {
     from {height: 100vh}
-    to {height: 50vh;}
+    to {height: 40vh;}
 }
 
 .title {
@@ -113,17 +113,39 @@ body {
   color: var(--lBl);
 }
 
+/* Desktop */
 @media only screen and (min-width: 768px) {
+    @keyframes shrink-title_div {
+        from {height: 100vh;}
+        to {height: 50vh;}
+    }
+
     .main-title {
-        font-size: 15vw;
+        font-size: 10vw;
     }
     @keyframes shrink-main_title {
-        from {font-size: 15vw;}
-        to {font-size: 7vw;}
+        from {font-size: 10vw;}
+        to {font-size: 5vw;}
     } 
     
-    @keyframes shrink-title_div {
-    from {height: 100vh}
-    to {height: 30vh;}
-  }
+    .subtitle-main {
+        font-size: 2vw;
+    }
+
+    .subtitle-stats {
+        font-size: 1vw;
+    }
+
+    .subtitle {
+        transform: scale(2);
+
+        animation-name: shrink-subtitle;
+        animation-duration: 0.5s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes shrink-subtitle {
+        from {transform: scale(2);}
+        to {transform: scale(1.5);}
+    }
 }
