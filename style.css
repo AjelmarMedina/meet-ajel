@@ -20,9 +20,9 @@ html {
 
 }
 
-body {
+/* body {
 	overflow-y: hidden;
-}
+} */
 
 .title-div {
 	background-color: var(--Y);
@@ -232,7 +232,6 @@ body {
 }
 
 .interests h2 {
-
 	font-family: monospace;
 
 }
@@ -240,6 +239,7 @@ body {
 .interests hr {
 	background-color: var(--Bl);
 	width: 3px;
+	margin-left: 3em;
 }
 
 
@@ -302,12 +302,7 @@ body {
 	}
 
 	.interests:hover>h2 {
-		transform: scale(1.1);
-		transform-origin: left;
-	}
-
-	.interests:hover>hr {
-		transform: scale(1.1);
+		transform: scale(1.4);
 		transform-origin: left;
 	}
 
