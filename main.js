@@ -1,5 +1,5 @@
 window.onload = () => {
-
+    window.scrollTo(0, 0);
     setTimeout(typeSubtitleEffect, 2000);
     setTimeout(() => {
         document.querySelector("body")
@@ -13,7 +13,7 @@ async function typeSubtitleEffect() {
     let subtitleMain = "Web Developer".split("");
     let  subtitleMainSpan = document.querySelector("#subtitle-main");
     
-    let subtitleStats = `Age: 17, Height: 5'7" (170cm), Section: CP G 12 - Bethesda`.split("");
+    let subtitleStats = `Age: 17, Height: 5'7", Section: CP G 12 - Bethesda`.split("");
     let subtitleStatsSpan = document.querySelector("#subtitle-stats");
     
     subtitleMainSpan.innerHTML = ""
@@ -38,4 +38,4 @@ function sleep(ms) {
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-  }
+}

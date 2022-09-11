@@ -28,7 +28,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 100vh; */
     overflow: hidden;
 
     animation-name: shrink-title_div;
@@ -53,11 +52,12 @@ body {
 .main-title {
     margin-bottom: 0.5em;
     font-size: 20vw;
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Zilla Slab', "sans-serif bold";
     width: fit-content;
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-style: italic;
 
     animation-name: shrink-main_title;
     animation-duration: 0.75s;
@@ -107,12 +107,13 @@ body {
 
 .subtitle-main {
   font-size: 7vw;
-  font-family: "Zilla Slab", serif;
+  font-family: "Zilla Slab", "monospace";
+  font-weight: bolder;
   color: var(--Bl);
 }
 
 .subtitle-stats {
-  font-size: 2.5vw;
+  font-size: 2.7vw;
   font-style: italic;
   font-weight: 700;
   font-family: monospace;
@@ -120,7 +121,7 @@ body {
 }
 
 .type-pointer {
-    font-family: "Zilla Slab", serif;
+    font-family: "Zilla Slab", monospace;
     color: var(--Bl);
 
     animation-name: blinking-type_pointer;
@@ -155,12 +156,14 @@ body {
 
 .interests-header {
   color: var(--B);
-  padding: 0.5em 2.5em;
+  font-size: 1.5em;
+  padding: 0 2.5em;
   background-color: var(--Y);
   border: 2px solid var(--B);
   border-radius: 2em;
-  margin: 1em;
-  font-family: "Zilla Slab", serif;
+  margin: 2em;
+  font-family: "Zilla Slab", monospace;
+  font-weight: 700;
   box-shadow: 0.3em 0.4em 0.4em var(--B);
 }
 
@@ -173,7 +176,7 @@ body {
 .interests { 
   display: flex;
   flex-wrap: wrap;
-  padding: 1.3em;
+  padding: 1.3em 2em;
   padding-bottom: 7em;
   /* background-color: var(--W); */
   color: var(--B);
@@ -184,28 +187,25 @@ body {
 }
 
 .interests p {
+  text-indent: 2em;
   color: var(--lB);
-  font-family: 'Arial Narrow Bold', sans-serif;
+  font-family: monospace;
   font-style: italic
 }
 
 .interests h2 {
   font-family: monospace;
+  
 }
 
 .interests hr {
-    color: var(--Bl);
-    
+    background-color: var(--Bl);
+    width: 3px;
 }
 
 
 /* Desktop */
 @media only screen and (min-width: 550px) {
-    @keyframes shrink-title_div {
-        from {height: 100vh;}
-        to {height: 50vh;}
-    }
-
     .main-title {
         font-size: 10vw;
     }
@@ -245,12 +245,14 @@ body {
         margin: 0 1em;
         transition: ease-in-out 1s;
     }
-
+    
     .interests:hover {
-        transform: scale(1.05);
-    }    
-    .interests:hover > h2 {
-        transform: scale(1.5);
-        transform-origin: left;
-    }    
+      transform: scale(1.05);
+    }
+    
+    .interests:hover>h2 {
+      transform: scale(1.05);
+      transform-origin: left;
+    }
+    
 }
