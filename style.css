@@ -57,6 +57,27 @@ html {
 	flex-direction: column;
 }
 
+.title-heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-picture, .title-signature {
+	width: 12vw; height: 12vw;
+	border-radius: 100%;
+}
+
+.title-picture {
+	background-color: white;
+	transform: translate(25%, -75%);
+}
+
+.title-signature {
+	background-color: red;
+	transform: translate(-25%, 75%);
+}
+
 .main-title {
 	margin-bottom: 0.5em;
 	font-size: 20vw;
@@ -194,7 +215,7 @@ html {
 
 .interests-header {
 	color: var(--B);
-	font-size: 1.5em;
+	font-size: 1.2em;
 	padding: 0 2.5em;
 	background-color: var(--Y);
 	border: 2px solid var(--B);
@@ -203,6 +224,17 @@ html {
 	font-family: "Zilla Slab", monospace;
 	font-weight: 700;
 	box-shadow: 0.3em 0.4em 0.4em var(--B);
+
+	animation-name: fade_in-interests_header;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-delay: 13s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes fade_in-interests_header {
+	from {opacity: 0;}
+	to {opacity: 1;}
 }
 
 .interests-box {
@@ -245,6 +277,12 @@ html {
 
 /* Desktop */
 @media only screen and (min-width: 550px) {
+	.title-signature, .title-picture {
+		transform: translate(0, 0);
+		margin: 0 7vw;
+		width: 12vw; height: 12vw;
+	}
+
 	.main-title {
 		font-size: 10vw;
 	}
