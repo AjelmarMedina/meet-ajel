@@ -69,14 +69,21 @@ html {
 }
 
 .title-picture {
-	background-color: white;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("./assets/title_picture.jpg");
 	transform: translate(25%, -75%);
 }
 
 .title-signature {
-	background-color: red;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url("./assets/title_signature.jpg");
 	transform: translate(-25%, 75%);
 }
+
 
 .main-title {
 	margin-bottom: 0.5em;
@@ -260,7 +267,8 @@ html {
 	text-indent: 2em;
 	color: var(--lB);
 	font-family: monospace;
-	font-style: italic
+	font-style: italic;
+	font-size: 1.2em;
 }
 
 .interests h2 {
@@ -272,6 +280,17 @@ html {
 	background-color: var(--Bl);
 	width: 3px;
 	margin-left: 3em;
+}
+
+.interests-image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 3em;
+}
+
+.interests-image img {
+	max-width: 100%;
 }
 
 
