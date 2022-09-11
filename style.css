@@ -20,9 +20,9 @@ html {
 
 }
 
-/* body {
+body {
 	overflow-y: hidden;
-} */
+}
 
 .title-div {
 	background-color: var(--Y);
@@ -244,7 +244,6 @@ html {
 	flex-wrap: wrap;
 	padding: 1.3em 2em;
 	padding-bottom: 7em;
-	/* background-color: var(--W); */
 	color: var(--B);
 	margin: 1.5em 0;
 	border-top-left-radius: 3em;
@@ -296,8 +295,8 @@ html {
   .interests_animation {
     animation-name: scale-interests;
     animation-duration: 1s;
+		animation-delay: 0.7s;
 		animation-fill-mode: both;
-		/* animation-timing-function: ease-in-out; */
 		animation-iteration-count: 1;
   }
 

@@ -45,7 +45,6 @@ function observeInterests() {
       const square = entry.target.querySelector('.interests');
       
       if (entry.isIntersecting) {
-        await sleep(1000);
         square.classList.add('interests_animation');
       return; // if we added the class, exit the function
       }
