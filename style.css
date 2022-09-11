@@ -9,15 +9,17 @@
     --Bl: #000FAF;
     --lBl: #858CD4;
 
-    --interests-background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0.9), rgba(255,255,255,0) );
+    --interests-background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
 
 }
+
 body {
     overflow-y: hidden;
 }
@@ -35,9 +37,15 @@ body {
     animation-delay: 12s;
     animation-fill-mode: both;
 }
+
 @keyframes shrink-title_div {
-    from {height: 100vh}
-    to {height: 50vh;}
+    from {
+        height: 100vh
+    }
+
+    to {
+        height: 50vh;
+    }
 }
 
 .title {
@@ -64,9 +72,15 @@ body {
     animation-delay: 10s;
     animation-fill-mode: forwards;
 }
+
 @keyframes shrink-main_title {
-    from {font-size: 20vw;}
-    to {font-size: 10vw;}
+    from {
+        font-size: 20vw;
+    }
+
+    to {
+        font-size: 10vw;
+    }
 }
 
 .name-title {
@@ -81,9 +95,15 @@ body {
     animation-name: ajelmar-slide_in;
     animation-duration: 0.75s;
 }
+
 @keyframes ajelmar-slide_in {
-    from {transform: translate(70vw);}
-    to {transform: translate(0vw);}
+    from {
+        transform: translate(70vw);
+    }
+
+    to {
+        transform: translate(0vw);
+    }
 }
 
 .title-medina {
@@ -94,30 +114,36 @@ body {
     animation-name: medina-slide_in;
     animation-duration: 0.75s;
 }
+
 @keyframes medina-slide_in {
-    from {transform: translate(-70vw);}
-    to {transform: translate(0vw);}
+    from {
+        transform: translate(-70vw);
+    }
+
+    to {
+        transform: translate(0vw);
+    }
 }
 
 .subtitle {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .subtitle-main {
-  font-size: 7vw;
-  font-family: "Zilla Slab", "monospace";
-  font-weight: bolder;
-  color: var(--Bl);
+    font-size: 7vw;
+    font-family: "Zilla Slab", "monospace";
+    font-weight: bolder;
+    color: var(--Bl);
 }
 
 .subtitle-stats {
-  font-size: 2.7vw;
-  font-style: italic;
-  font-weight: 700;
-  font-family: monospace;
-  color: var(--lBl);
+    font-size: 2.7vw;
+    font-style: italic;
+    font-weight: 700;
+    font-family: monospace;
+    color: var(--lBl);
 }
 
 .type-pointer {
@@ -129,9 +155,15 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 @keyframes blinking-type_pointer {
-    from {opacity: 1;}
-    to {opacity: 0;}
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 .interests-div {
@@ -149,53 +181,60 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
 @keyframes background-animate {
-    from {background-position: 0% 0%;}
-    to {background-position: 100% 100%;}
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
 }
 
 .interests-header {
-  color: var(--B);
-  font-size: 1.5em;
-  padding: 0 2.5em;
-  background-color: var(--Y);
-  border: 2px solid var(--B);
-  border-radius: 2em;
-  margin: 2em;
-  font-family: "Zilla Slab", monospace;
-  font-weight: 700;
-  box-shadow: 0.3em 0.4em 0.4em var(--B);
+    color: var(--B);
+    font-size: 1.5em;
+    padding: 0 2.5em;
+    background-color: var(--Y);
+    border: 2px solid var(--B);
+    border-radius: 2em;
+    margin: 2em;
+    font-family: "Zilla Slab", monospace;
+    font-weight: 700;
+    box-shadow: 0.3em 0.4em 0.4em var(--B);
 }
 
 .interests-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.interests { 
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.3em 2em;
-  padding-bottom: 7em;
-  /* background-color: var(--W); */
-  color: var(--B);
-  margin: 1.5em 0;
-  border-top-left-radius: 3em;
-  border-top-right-radius: 3em;
-  background-image: var(--interests-background);
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.3em 2em;
+    padding-bottom: 7em;
+    /* background-color: var(--W); */
+    color: var(--B);
+    margin: 1.5em 0;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+    background-image: var(--interests-background);
 }
 
 .interests p {
-  text-indent: 2em;
-  color: var(--lB);
-  font-family: monospace;
-  font-style: italic
+    text-indent: 2em;
+    color: var(--lB);
+    font-family: monospace;
+    font-style: italic
 }
 
 .interests h2 {
-  font-family: monospace;
-  
+
+    font-family: monospace;
+
 }
 
 .interests hr {
@@ -209,11 +248,17 @@ body {
     .main-title {
         font-size: 10vw;
     }
+
     @keyframes shrink-main_title {
-        from {font-size: 10vw;}
-        to {font-size: 5vw;}
-    } 
-    
+        from {
+            font-size: 10vw;
+        }
+
+        to {
+            font-size: 5vw;
+        }
+    }
+
     .subtitle-main {
         font-size: 2vw;
     }
@@ -230,9 +275,15 @@ body {
         animation-delay: 10s;
         animation-fill-mode: forwards;
     }
+
     @keyframes shrink-subtitle {
-        from {transform: scale(2);}
-        to {transform: scale(1.5);}
+        from {
+            transform: scale(2);
+        }
+
+        to {
+            transform: scale(1.5);
+        }
     }
 
     .interests-box {
@@ -245,14 +296,14 @@ body {
         margin: 0 1em;
         transition: ease-in-out 1s;
     }
-    
+
     .interests:hover {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
-    
+
     .interests:hover>h2 {
-      transform: scale(1.05);
-      transform-origin: left;
+        transform: scale(1.1);
+        /* transform-origin: left; */
     }
-    
+
 }
