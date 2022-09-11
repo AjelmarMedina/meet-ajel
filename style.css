@@ -286,7 +286,12 @@ html {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding: 3em;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+#image-growth {
+	border-radius: 0;
 }
 
 .interests-image img {
@@ -361,6 +366,10 @@ html {
 	.interests:hover>h2 {
 		transform: scale(1.4);
 		transform-origin: left;
+	}
+
+	.interests-image {
+		padding: 1vw;
 	}
 
 }
