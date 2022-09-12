@@ -270,6 +270,19 @@ body {
 	margin-left: 3em;
 }
 
+.interests_hr-animation {
+	animation-name: slide-interests_hr;
+	animation-duration: 1s;
+	animation-delay: 0.7s;
+	animation-fill-mode: both;
+	animation-iteration-count: 1;
+}
+
+@keyframes slide-interests_hr {
+	from {transform: translate(0);}
+	to {transform: translate(1em);}
+}
+
 .interests-image {
 	width: 100%;
 	display: flex;
@@ -389,6 +402,14 @@ body {
 
 	.interests-image {
 		padding: 1vw;
+	}
+
+	.interests hr {
+		transition: ease-in-out 1s;
+		animation: 0;
+	}
+	.interests:hover>hr {
+		transform: translate(1em);
 	}
 
 }

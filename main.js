@@ -1,8 +1,7 @@
 window.onload = () => {
   window.scrollTo(0, 0);
   
-  if (window.matchMedia(`(prefers-reduced-motion: reduce)`)) {observeInterests()}
-
+  observeInterests();
   setTimeout(typeSubtitleEffect, 2000);
   setTimeout(() => {
     document.querySelector("body").style.overflowY = "scroll";
@@ -43,14 +42,18 @@ function observeInterests() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(async (entry) => {
       const square = entry.target.querySelector('.interests');
-      
+      const hr = square.querySelector('hr');
+
       if (entry.isIntersecting) {
-        square.classList.add('interests_animation');
+        if (window.matchMedia(`(prefers-reduced-motion: reduce)`)) {square.classList.add('interests_animation')}
+        hr.classList.add('interests_hr-animation');
       return; // if we added the class, exit the function
       }
   
       // We're not intersecting, so remove the class!
       square.classList.remove('interests_animation');
+      hr.classList.remove('interests_hr-animation');
+
     });
   });
   
