@@ -246,6 +246,7 @@ body {
 	padding-bottom: 7em;
 	color: var(--B);
 	margin: 1.5em 0;
+	margin-bottom: 1em;
 	border-top-left-radius: 3em;
 	border-top-right-radius: 3em;
 	background-image: var(--interests-background);
@@ -257,6 +258,8 @@ body {
 	font-family: monospace;
 	font-style: italic;
 	font-size: 1.2em;
+	border-left: 0.5em solid var(--lY);
+	padding: 1em;
 }
 
 .interests h2 {
@@ -287,7 +290,7 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	border-radius: 4px;
+	border-radius: 4vw;
 	overflow: hidden;
 }
 
@@ -386,7 +389,7 @@ body {
 	}
 
 	.interests {
-		margin: 0 1em;
+		margin: 1em;
 		transition: ease-in-out 1s;
 		animation: none;
 	}
@@ -402,6 +405,7 @@ body {
 
 	.interests-image {
 		padding: 1vw;
+
 	}
 
 	.interests hr {
