@@ -11,7 +11,7 @@ window.onload = () => {
 async function typeSubtitleEffect() {
   let pointer = document.querySelector("#subtitle-type_pointer-main");
 
-  let subtitleMain = "Web Developer".split("");
+  let subtitleMain = "Frontend Web Developer".split("");
   let subtitleMainSpan = document.querySelector("#subtitle-main");
 
   let subtitleStats =
