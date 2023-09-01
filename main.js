@@ -15,7 +15,7 @@ async function typeSubtitleEffect() {
   let subtitleMainSpan = document.querySelector("#subtitle-main");
 
   let subtitleStats =
-    `Age: 18, Height: 5'7", Section: CP G 12 - Bethesda`.split("");
+    `Age: 18, Height: 5'7", Section: COM233`.split("");
   let subtitleStatsSpan = document.querySelector("#subtitle-stats");
 
   subtitleMainSpan.innerHTML = "";
